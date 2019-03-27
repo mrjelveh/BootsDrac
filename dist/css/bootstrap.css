@@ -7599,4 +7599,53 @@ a.text-dark:hover, a.text-dark:focus {
   .btn-rounded.btn-sm, .btn-group-sm > .btn-rounded.btn, .btn-rounded.input-sm, .input-rounded.btn-sm, .btn-group-sm > .input-rounded.btn, .input-rounded.input-sm {
     border-radius: 6rem; }
 
+.pagination {
+  padding-right: 0; }
+  .pagination.pagination-circle .page-link {
+    border-radius: 10rem !important;
+    margin-right: .2em;
+    margin-left: .2em;
+    line-height: 0;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0; }
+    .pagination.pagination-circle .page-link span, .pagination.pagination-circle .page-link i {
+      display: inline-block;
+      vertical-align: middle; }
+  .pagination.pagination-circle.pagination-lg .page-link {
+    width: 56px;
+    height: 56px; }
+  .pagination.pagination-circle.pagination-sm .page-link {
+    width: 31px;
+    height: 31px; }
+  .pagination.pagination-rounded .page-link {
+    border-radius: .5rem;
+    margin-right: .2em;
+    margin-left: .2em; }
+  .pagination.pagination-rounded .page-item:last-child .page-link {
+    margin-right: 0;
+    margin-left: .2em;
+    border-bottom-right-radius: 1rem;
+    border-top-right-radius: 1rem; }
+  .pagination.pagination-rounded .page-item:first-child .page-link {
+    margin-left: 0;
+    margin-right: .2em;
+    border-bottom-left-radius: 1rem;
+    border-top-left-radius: 1rem; }
+  .pagination.pagination-rounded .pagination-lg .page-item:last-child .page-link {
+    border-bottom-right-radius: 1.5rem;
+    border-top-right-radius: 1.5rem; }
+  .pagination.pagination-rounded .pagination-lg .page-item:first-child .page-link {
+    border-bottom-left-radius: 1.5rem;
+    border-top-left-radius: 1.5rem; }
+  .pagination.pagination-rounded .pagination-sm .page-item:last-child .page-link {
+    border-bottom-right-radius: .8rem;
+    border-top-right-radius: .8rem; }
+  .pagination.pagination-rounded .pagination-sm .page-item:first-child .page-link {
+    border-bottom-left-radius: .8rem;
+    border-top-left-radius: .8rem; }
+
 /*# sourceMappingURL=bootstrap.css.map */
