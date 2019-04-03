@@ -97,3 +97,75 @@ $rounded-input-btn-padding-x:            1.2rem !default;
     }
   }
 }
+
+@mixin pagination-variant($background, $border, $hover-background: lighten($background, 10%), $hover-border: lighten($border, 10%), $active-background: lighten($background, 10%), $active-border: lighten($border, 12.5%)) {
+  .page-link {
+    color: $pagination-color; //color-yiq($hover-background)
+    @include gradient-bg($background);
+    border-color: $border;
+
+    @include hover {
+      color: color-yiq($hover-background);
+      @include gradient-bg($hover-background);
+      border-color: $hover-border;
+    }
+  }
+  .page-item {
+    &:focus,
+    &.focus {
+      .page-link {
+        // Avoid using mixin so we can pass custom focus shadow properly
+        @if $enable-shadows {
+          box-shadow: $btn-box-shadow, 0 0 0 $btn-focus-width rgba(mix(color-yiq($background), $border, 15%), .5);
+        } @else {
+          box-shadow: 0 0 0 $btn-focus-width rgba(mix(color-yiq($background), $border, 15%), .5);
+        }
+      }
+    }
+
+    // Disabled comes first so active can properly restyle
+    &.disabled,
+    &:disabled {
+      .page-link {
+        color: color-yiq($background);
+        background-color: $background;
+        border-color: $border;
+        // Remove CSS gradients if they're enabled
+        @if $enable-gradients {
+          background-image: none;
+        }
+      }
+    }
+
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active,
+    .show > &.dropdown-toggle {
+      .page-link {
+        color: color-yiq($active-background);
+        background-color: $active-background;
+        @if $enable-gradients {
+          background-image: none; // Remove the gradient for the pressed/active state
+        }
+        border-color: $active-border;
+      }
+
+      &:focus {
+        .page-link {
+          // Avoid using mixin so we can pass custom focus shadow properly
+          @if $enable-shadows and $btn-active-box-shadow != none {
+            box-shadow: $btn-active-box-shadow, 0 0 0 $btn-focus-width rgba(mix(color-yiq($background), $border, 15%), .5);
+          } @else {
+            box-shadow: 0 0 0 $btn-focus-width rgba(mix(color-yiq($background), $border, 15%), .5);
+          }
+        }
+      }
+    }
+  }
+}
+@each $color, $value in $theme-colors {
+  .pagination-#{$color} {
+      @include pagination-variant($value, $value);
+  }
+}
+
+
