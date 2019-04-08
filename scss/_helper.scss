@@ -100,7 +100,7 @@ $rounded-input-btn-padding-x:            1.2rem !default;
 
 @mixin pagination-variant($background, $border, $hover-background: lighten($background, 10%), $hover-border: lighten($border, 10%), $active-background: lighten($background, 10%), $active-border: lighten($border, 12.5%)) {
   .page-link {
-    color: $pagination-color; //color-yiq($hover-background)
+    color: $white; //color-yiq($hover-background)
     @include gradient-bg($background);
     border-color: $border;
 
