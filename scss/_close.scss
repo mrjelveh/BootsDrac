@@ -1,21 +1,45 @@
-.close {
-  float: right;
-  @include font-size($close-font-size);
-  font-weight: $close-font-weight;
-  line-height: 1;
-  color: $close-color;
-  text-shadow: $close-text-shadow;
-  opacity: .5;
-
-  // Override <a>'s hover style
-  @include hover {
+@if $direction == rtl {
+  .close {
+    float: left;
+    @include font-size($close-font-size);
+    font-weight: $close-font-weight;
+    line-height: 1;
     color: $close-color;
-    text-decoration: none;
-  }
+    text-shadow: $close-text-shadow;
+    opacity: .5;
 
-  &:not(:disabled):not(.disabled) {
-    @include hover-focus {
-      opacity: .75;
+    // Override <a>'s hover style
+    @include hover {
+      color: $close-color;
+      text-decoration: none;
+    }
+
+    &:not(:disabled):not(.disabled) {
+      @include hover-focus {
+        opacity: .75;
+      }
+    }
+  }
+} @else {
+  .close {
+    float: right;
+    @include font-size($close-font-size);
+    font-weight: $close-font-weight;
+    line-height: 1;
+    color: $close-color;
+    text-shadow: $close-text-shadow;
+    opacity: .5;
+
+    // Override <a>'s hover style
+    @include hover {
+      color: $close-color;
+      text-decoration: none;
+    }
+
+    &:not(:disabled):not(.disabled) {
+      @include hover-focus {
+        opacity: .75;
+      }
     }
   }
 }

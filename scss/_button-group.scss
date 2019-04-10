@@ -44,12 +44,12 @@
     }
 
     // Reset rounded corners
-    > .btn:not(:first-child):not(.dropdown-toggle),
+    > .btn:not(:first-child),
     > .btn-group:not(:first-child) > .btn {
       @include border-right-radius(0);
     }
 
-    > .btn:not(:last-child),
+    > .btn:not(:last-child):not(.dropdown-toggle),
     > .btn-group:not(:last-child) > .btn {
       @include border-left-radius(0);
     }
