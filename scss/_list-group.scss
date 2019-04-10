@@ -7,7 +7,11 @@
   flex-direction: column;
 
   // No need to set list-style: none; since .list-group-item is block level
-  padding-left: 0; // reset padding because ul and ol
+  @if $direction == rtl {
+    padding-right: 0; // reset padding because ul and ol
+  } @else {
+    padding-left: 0; // reset padding because ul and ol
+  }
   margin-bottom: 0;
 }
 

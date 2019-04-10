@@ -92,8 +92,14 @@ mark,
 .list-inline-item {
   display: inline-block;
 
-  &:not(:last-child) {
-    margin-right: $list-inline-padding;
+  @if $direction == rtl {
+    &:not(:first-child) {
+      margin-right: $list-inline-padding;
+    }
+  } @else {
+    &:not(:last-child) {
+      margin-right: $list-inline-padding;
+    }
   }
 }
 

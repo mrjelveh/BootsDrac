@@ -3,12 +3,22 @@
 // Kickstart any navigation component with a set of style resets. Works with
 // `<nav>`s or `<ul>`s.
 
-.nav {
-  display: flex;
-  flex-wrap: wrap;
-  padding-left: 0;
-  margin-bottom: 0;
-  list-style: none;
+@if $direction == rtl {
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+    padding-right: 0;
+    margin-bottom: 0;
+    list-style: none;
+  }
+} @else {
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+  }
 }
 
 .nav-link {

@@ -39,17 +39,33 @@
 //
 // Used for brand, project, or site names.
 
-.navbar-brand {
-  display: inline-block;
-  padding-top: $navbar-brand-padding-y;
-  padding-bottom: $navbar-brand-padding-y;
-  margin-right: $navbar-padding-x;
-  @include font-size($navbar-brand-font-size);
-  line-height: inherit;
-  white-space: nowrap;
+@if $direction == rtl {
+  .navbar-brand {
+    display: inline-block;
+    padding-top: $navbar-brand-padding-y;
+    padding-bottom: $navbar-brand-padding-y;
+    margin-left: $navbar-padding-x;
+    @include font-size($navbar-brand-font-size);
+    line-height: inherit;
+    white-space: nowrap;
 
-  @include hover-focus {
-    text-decoration: none;
+    @include hover-focus {
+      text-decoration: none;
+    }
+  }
+} @else {
+  .navbar-brand {
+    display: inline-block;
+    padding-top: $navbar-brand-padding-y;
+    padding-bottom: $navbar-brand-padding-y;
+    margin-right: $navbar-padding-x;
+    @include font-size($navbar-brand-font-size);
+    line-height: inherit;
+    white-space: nowrap;
+
+    @include hover-focus {
+      text-decoration: none;
+    }
   }
 }
 
@@ -58,21 +74,41 @@
 //
 // Custom navbar navigation (doesn't require `.nav`, but does make use of `.nav-link`).
 
-.navbar-nav {
-  display: flex;
-  flex-direction: column; // cannot use `inherit` to get the `.navbar`s value
-  padding-left: 0;
-  margin-bottom: 0;
-  list-style: none;
-
-  .nav-link {
+@if $direction == rtl {
+  .navbar-nav {
+    display: flex;
+    flex-direction: column; // cannot use `inherit` to get the `.navbar`s value
     padding-right: 0;
-    padding-left: 0;
-  }
+    margin-bottom: 0;
+    list-style: none;
 
-  .dropdown-menu {
-    position: static;
-    float: none;
+    .nav-link {
+      padding-right: 0;
+      padding-left: 0;
+    }
+
+    .dropdown-menu {
+      position: static;
+      float: none;
+    }
+  }
+} @else {
+  .navbar-nav {
+    display: flex;
+    flex-direction: column; // cannot use `inherit` to get the `.navbar`s value
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+
+    .nav-link {
+      padding-right: 0;
+      padding-left: 0;
+    }
+
+    .dropdown-menu {
+      position: static;
+      float: none;
+    }
   }
 }
 

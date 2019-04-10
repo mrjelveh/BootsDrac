@@ -10,16 +10,30 @@
 
 .breadcrumb-item {
   // The separator between breadcrumbs (by default, a forward-slash: "/")
-  + .breadcrumb-item {
-    padding-left: $breadcrumb-item-padding;
-
-    &::before {
-      display: inline-block; // Suppress underlining of the separator in modern browsers
+  @if $direction == rtl {
+    + .breadcrumb-item {
       padding-right: $breadcrumb-item-padding;
-      color: $breadcrumb-divider-color;
-      content: $breadcrumb-divider;
+
+      &::before {
+        display: inline-block; // Suppress underlining of the separator in modern browsers
+        padding-left: $breadcrumb-item-padding;
+        color: $breadcrumb-divider-color;
+        content: $breadcrumb-divider;
+      }
+    }
+  } @else {
+    + .breadcrumb-item {
+      padding-left: $breadcrumb-item-padding;
+
+      &::before {
+        display: inline-block; // Suppress underlining of the separator in modern browsers
+        padding-right: $breadcrumb-item-padding;
+        color: $breadcrumb-divider-color;
+        content: $breadcrumb-divider;
+      }
     }
   }
+
 
   // IE9-11 hack to properly handle hyperlink underlines for breadcrumbs built
   // without `<ul>`s. The `::before` pseudo-element generates an element

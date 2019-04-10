@@ -194,35 +194,70 @@
         border-left: 0;
       }
 
-      // Handle rounded corners
-      @if $enable-rounded {
-        &:not(:last-child) {
-          @include border-right-radius(0);
+      @if $direction == rtl {
+        // Handle rounded corners
+        @if $enable-rounded {
+          &:not(:first-child) {
+            @include border-right-radius(0);
 
-          .card-img-top,
-          .card-header {
-            // stylelint-disable-next-line property-blacklist
-            border-top-right-radius: 0;
+            .card-img-top,
+            .card-header {
+              // stylelint-disable-next-line property-blacklist
+              border-top-right-radius: 0;
+            }
+            .card-img-bottom,
+            .card-footer {
+              // stylelint-disable-next-line property-blacklist
+              border-bottom-right-radius: 0;
+            }
           }
-          .card-img-bottom,
-          .card-footer {
-            // stylelint-disable-next-line property-blacklist
-            border-bottom-right-radius: 0;
+
+          &:not(:last-child) {
+            @include border-left-radius(0);
+
+            .card-img-top,
+            .card-header {
+              // stylelint-disable-next-line property-blacklist
+              border-top-left-radius: 0;
+            }
+            .card-img-bottom,
+            .card-footer {
+              // stylelint-disable-next-line property-blacklist
+              border-bottom-left-radius: 0;
+            }
           }
         }
+      } @else {
+        // Handle rounded corners
+        @if $enable-rounded {
+          &:not(:last-child) {
+            @include border-right-radius(0);
 
-        &:not(:first-child) {
-          @include border-left-radius(0);
-
-          .card-img-top,
-          .card-header {
-            // stylelint-disable-next-line property-blacklist
-            border-top-left-radius: 0;
+            .card-img-top,
+            .card-header {
+              // stylelint-disable-next-line property-blacklist
+              border-top-right-radius: 0;
+            }
+            .card-img-bottom,
+            .card-footer {
+              // stylelint-disable-next-line property-blacklist
+              border-bottom-right-radius: 0;
+            }
           }
-          .card-img-bottom,
-          .card-footer {
-            // stylelint-disable-next-line property-blacklist
-            border-bottom-left-radius: 0;
+
+          &:not(:first-child) {
+            @include border-left-radius(0);
+
+            .card-img-top,
+            .card-header {
+              // stylelint-disable-next-line property-blacklist
+              border-top-left-radius: 0;
+            }
+            .card-img-bottom,
+            .card-footer {
+              // stylelint-disable-next-line property-blacklist
+              border-bottom-left-radius: 0;
+            }
           }
         }
       }
