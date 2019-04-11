@@ -92,7 +92,7 @@ mark,
 .list-inline-item {
   display: inline-block;
 
-  @if $direction == rtl {
+  @if $framework-direction == rtl {
     &:not(:first-child) {
       margin-right: $list-inline-padding;
     }

@@ -44,7 +44,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 //    the `inherit` value on things like `<th>` elements.
 
 
-@if $direction == rtl {
+@if $framework-direction == rtl {
   body {
     direction: rtl;
     margin: 0; // 1

@@ -87,7 +87,7 @@
   }
 
   .custom-select {
-    @if $direction {
+    @if $framework-direction == rtl {
       .was-validated &:#{$state},
       &.is-#{$state} {
         border-color: $color;

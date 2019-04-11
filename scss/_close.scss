@@ -1,4 +1,4 @@
-@if $direction == rtl {
+@if $framework-direction == rtl {
   .close {
     float: left;
     @include font-size($close-font-size);

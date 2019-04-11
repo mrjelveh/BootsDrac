@@ -199,7 +199,7 @@ textarea.form-control {
 //
 // Indent the labels to position radios/checkboxes as hanging controls.
 
-@if $direction == rtl {
+@if $framework-direction == rtl {
   .form-check {
     position: relative;
     display: block;
@@ -219,7 +219,7 @@ textarea.form-control {
   margin-bottom: 0; // Override default `<label>` bottom margin
 }
 
-@if $direction == rtl {
+@if $framework-direction == rtl {
   .form-check-input {
     position: absolute;
     margin-top: $form-check-input-margin-y;
@@ -340,7 +340,7 @@ textarea.form-control {
     // Remove default margin on radios/checkboxes that were used for stacking, and
     // then undo the floating of radios and checkboxes to match.
 
-    @if $direction == rtl {
+    @if $framework-direction == rtl {
       .form-check {
         display: flex;
         align-items: center;

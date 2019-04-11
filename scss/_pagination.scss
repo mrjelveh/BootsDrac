@@ -30,7 +30,7 @@
 }
 
 .page-item {
-  @if $direction == rtl {
+  @if $framework-direction == rtl {
     &:last-child {
       .page-link {
         margin-left: 0;

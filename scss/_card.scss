@@ -194,7 +194,7 @@
         border-left: 0;
       }
 
-      @if $direction == rtl {
+      @if $framework-direction == rtl {
         // Handle rounded corners
         @if $enable-rounded {
           &:not(:first-child) {

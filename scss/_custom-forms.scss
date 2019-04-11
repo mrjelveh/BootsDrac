@@ -7,7 +7,7 @@
 //
 // Base class takes care of all the key behavioral aspects.
 
-@if $direction == rtl {
+@if $framework-direction == rtl {
   .custom-control {
     position: relative;
     display: block;
@@ -86,7 +86,7 @@
   margin-bottom: 0;
   vertical-align: top;
 
-  @if $direction == rtl {
+  @if $framework-direction == rtl {
     // Background-color and (when enabled) gradient
     &::before {
       position: absolute;
@@ -212,7 +212,7 @@
   padding-left: $custom-switch-width + $custom-control-gutter;
 
   .custom-control-label {
-    @if $direction == rtl {
+    @if $framework-direction == rtl {
       &::before {
         right: -($custom-switch-width + $custom-control-gutter);
         width: $custom-switch-width;
@@ -274,7 +274,7 @@
 // https://primer.github.io/.
 //
 
-@if $direction == rtl {
+@if $framework-direction == rtl {
   .custom-select {
     display: inline-block;
     width: 100%;
@@ -389,7 +389,7 @@
   }
 }
 
-@if $direction == rtl {
+@if $framework-direction == rtl {
   .custom-select-sm {
     height: $custom-select-height-sm;
     padding-top: $custom-select-padding-y-sm;
@@ -481,7 +481,7 @@
   @include border-radius($custom-file-border-radius);
   @include box-shadow($custom-file-box-shadow);
 
-  @if $direction == rtl {
+  @if $framework-direction == rtl {
     &::after {
       position: absolute;
       top: 0;
@@ -632,7 +632,7 @@
     @include border-radius($custom-range-track-border-radius);
   }
 
-  @if $direction == rtl {
+  @if $framework-direction == rtl {
     &::-ms-fill-upper {
       margin-left: 15px; // arbitrary?
       background-color: $custom-range-track-bg;

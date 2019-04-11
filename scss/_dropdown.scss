@@ -13,7 +13,7 @@
   @include caret;
 }
 
-@if $direction == rtl {
+@if $framework-direction == rtl {
 
   // The dropdown menu
   .dropdown-menu {
@@ -64,7 +64,7 @@
   @include media-breakpoint-up($breakpoint) {
     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
-    @if $direction == rtl {
+    @if $framework-direction == rtl {
       .dropdown-menu#{$infix}-left {
         left: auto;
         right: 0;
@@ -85,6 +85,7 @@
         left: auto;
       }
     }
+
   }
 }
 

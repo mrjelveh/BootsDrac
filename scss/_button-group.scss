@@ -35,7 +35,7 @@
   }
 }
 
-@if $direction == rtl {
+@if $framework-direction == rtl {
   .btn-group {
     // Prevent double borders when buttons are next to each other
     > .btn:not(:last-child),
@@ -87,7 +87,7 @@
 // Split button dropdowns
 //
 
-@if $direction == rtl {
+@if $framework-direction == rtl {
   .dropdown-toggle-split {
     padding-left: $btn-padding-x * .75;
     padding-right: $btn-padding-x * .75;

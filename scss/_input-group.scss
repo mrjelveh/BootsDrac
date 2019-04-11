@@ -3,7 +3,7 @@
 //
 // Base styles
 //
-@if $direction == rtl {
+@if $framework-direction == rtl {
   .input-group {
     position: relative;
     display: flex;

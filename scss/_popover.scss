@@ -86,7 +86,8 @@
     border-bottom: $popover-border-width solid $popover-header-bg;
   }
 }
-@if $direction == rtl {
+
+@if $framework-direction == rtl {
 
   .bs-popover-left {
     margin-left: $popover-arrow-height;
