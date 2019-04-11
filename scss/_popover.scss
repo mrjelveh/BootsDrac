@@ -55,6 +55,29 @@
   }
 }
 
+.bs-popover-right {
+  margin-left: $popover-arrow-height;
+
+  > .arrow {
+    left: calc((#{$popover-arrow-height} + #{$popover-border-width}) * -1);
+    width: $popover-arrow-height;
+    height: $popover-arrow-width;
+    margin: $border-radius-lg 0; // make sure the arrow does not touch the popover's rounded corners
+
+    &::before {
+      left: 0;
+      border-width: ($popover-arrow-width / 2) $popover-arrow-height ($popover-arrow-width / 2) 0;
+      border-right-color: $popover-arrow-outer-color;
+    }
+
+    &::after {
+      left: $popover-border-width;
+      border-width: ($popover-arrow-width / 2) $popover-arrow-height ($popover-arrow-width / 2) 0;
+      border-right-color: $popover-arrow-color;
+    }
+  }
+}
+
 .bs-popover-bottom {
   margin-top: $popover-arrow-height;
 
@@ -87,103 +110,29 @@
   }
 }
 
-@if $framework-direction == rtl {
+.bs-popover-left {
+  margin-right: $popover-arrow-height;
 
-  .bs-popover-left {
-    margin-left: $popover-arrow-height;
+  > .arrow {
+    right: calc((#{$popover-arrow-height} + #{$popover-border-width}) * -1);
+    width: $popover-arrow-height;
+    height: $popover-arrow-width;
+    margin: $border-radius-lg 0; // make sure the arrow does not touch the popover's rounded corners
 
-    > .arrow {
-      left: calc((#{$popover-arrow-height} + #{$popover-border-width}) * -1);
-      width: $popover-arrow-height;
-      height: $popover-arrow-width;
-      margin: $border-radius-lg 0; // make sure the arrow does not touch the popover's rounded corners
+    &::before {
+      right: 0;
+      border-width: ($popover-arrow-width / 2) 0 ($popover-arrow-width / 2) $popover-arrow-height;
+      border-left-color: $popover-arrow-outer-color;
+    }
 
-      &::before {
-        left: 0;
-        border-width: ($popover-arrow-width / 2) $popover-arrow-height ($popover-arrow-width / 2) 0;
-        border-right-color: $popover-arrow-outer-color;
-      }
-
-      &::after {
-        left: $popover-border-width;
-        border-width: ($popover-arrow-width / 2) $popover-arrow-height ($popover-arrow-width / 2) 0;
-        border-right-color: $popover-arrow-color;
-      }
+    &::after {
+      right: $popover-border-width;
+      border-width: ($popover-arrow-width / 2) 0 ($popover-arrow-width / 2) $popover-arrow-height;
+      border-left-color: $popover-arrow-color;
     }
   }
-
-  .bs-popover-right {
-    margin-right: $popover-arrow-height;
-
-    > .arrow {
-      right: calc((#{$popover-arrow-height} + #{$popover-border-width}) * -1);
-      width: $popover-arrow-height;
-      height: $popover-arrow-width;
-      margin: $border-radius-lg 0; // make sure the arrow does not touch the popover's rounded corners
-
-      &::before {
-        right: 0;
-        border-width: ($popover-arrow-width / 2) 0 ($popover-arrow-width / 2) $popover-arrow-height;
-        border-left-color: $popover-arrow-outer-color;
-      }
-
-      &::after {
-        right: $popover-border-width;
-        border-width: ($popover-arrow-width / 2) 0 ($popover-arrow-width / 2) $popover-arrow-height;
-        border-left-color: $popover-arrow-color;
-      }
-    }
-  }
-
-} @else {
-
-  .bs-popover-right {
-    margin-left: $popover-arrow-height;
-
-    > .arrow {
-      left: calc((#{$popover-arrow-height} + #{$popover-border-width}) * -1);
-      width: $popover-arrow-height;
-      height: $popover-arrow-width;
-      margin: $border-radius-lg 0; // make sure the arrow does not touch the popover's rounded corners
-
-      &::before {
-        left: 0;
-        border-width: ($popover-arrow-width / 2) $popover-arrow-height ($popover-arrow-width / 2) 0;
-        border-right-color: $popover-arrow-outer-color;
-      }
-
-      &::after {
-        left: $popover-border-width;
-        border-width: ($popover-arrow-width / 2) $popover-arrow-height ($popover-arrow-width / 2) 0;
-        border-right-color: $popover-arrow-color;
-      }
-    }
-  }
-
-  .bs-popover-left {
-    margin-right: $popover-arrow-height;
-
-    > .arrow {
-      right: calc((#{$popover-arrow-height} + #{$popover-border-width}) * -1);
-      width: $popover-arrow-height;
-      height: $popover-arrow-width;
-      margin: $border-radius-lg 0; // make sure the arrow does not touch the popover's rounded corners
-
-      &::before {
-        right: 0;
-        border-width: ($popover-arrow-width / 2) 0 ($popover-arrow-width / 2) $popover-arrow-height;
-        border-left-color: $popover-arrow-outer-color;
-      }
-
-      &::after {
-        right: $popover-border-width;
-        border-width: ($popover-arrow-width / 2) 0 ($popover-arrow-width / 2) $popover-arrow-height;
-        border-left-color: $popover-arrow-color;
-      }
-    }
-  }
-
 }
+
 .bs-popover-auto {
   &[x-placement^="top"] {
     @extend .bs-popover-top;
