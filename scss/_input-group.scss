@@ -3,6 +3,8 @@
 //
 // Base styles
 //
+
+// for switching Between RTL and LTR mode
 @if $framework-direction == rtl {
   .input-group {
     position: relative;
@@ -58,7 +60,7 @@
       align-items: center;
 
       &:not(:first-child) .custom-file-label,
-      &:not(:first-child) .custom-file-label::after {
+      &:not(:first-child) .custom-file-label::after, &:not(:last-child) .custom-file-label::after {
         @include border-right-radius(0);
       }
       &:not(:last-child) .custom-file-label {

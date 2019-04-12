@@ -199,6 +199,7 @@ textarea.form-control {
 //
 // Indent the labels to position radios/checkboxes as hanging controls.
 
+// for switching Between RTL and LTR mode
 @if $framework-direction == rtl {
   .form-check {
     position: relative;
@@ -219,6 +220,7 @@ textarea.form-control {
   margin-bottom: 0; // Override default `<label>` bottom margin
 }
 
+// for switching Between RTL and LTR mode
 @if $framework-direction == rtl {
   .form-check-input {
     position: absolute;
@@ -340,6 +342,7 @@ textarea.form-control {
     // Remove default margin on radios/checkboxes that were used for stacking, and
     // then undo the floating of radios and checkboxes to match.
 
+    // for switching Between RTL and LTR mode
     @if $framework-direction == rtl {
       .form-check {
         display: flex;

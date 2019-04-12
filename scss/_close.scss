@@ -1,3 +1,5 @@
+
+// for switching Between RTL and LTR mode
 @if $framework-direction == rtl {
   .close {
     float: left;

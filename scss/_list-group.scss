@@ -7,6 +7,7 @@
   flex-direction: column;
 
   // No need to set list-style: none; since .list-group-item is block level
+  // for switching Between RTL and LTR mode
   @if $framework-direction == rtl {
     padding-right: 0; // reset padding because ul and ol
   } @else {

@@ -43,30 +43,22 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 // 3. Set an explicit initial text-align value so that we can later use
 //    the `inherit` value on things like `<th>` elements.
 
+body {
+  margin: 0; // 1
+  font-family: $font-family-base;
+  @include font-size($font-size-base);
+  font-weight: $font-weight-base;
+  line-height: $line-height-base;
+  color: $body-color;
 
-@if $framework-direction == rtl {
-  body {
+  // for switching Between RTL and LTR mode
+  @if $framework-direction == rtl {
     direction: rtl;
-    margin: 0; // 1
-    font-family: $font-family-base;
-    @include font-size($font-size-base);
-    font-weight: $font-weight-base;
-    line-height: $line-height-base;
-    color: $body-color;
     text-align: right; // 3
-    background-color: $body-bg; // 2
-  }
-} @else {
-  body {
-    margin: 0; // 1
-    font-family: $font-family-base;
-    @include font-size($font-size-base);
-    font-weight: $font-weight-base;
-    line-height: $line-height-base;
-    color: $body-color;
+  } @else {
     text-align: left; // 3
-    background-color: $body-bg; // 2
   }
+  background-color: $body-bg; // 2
 }
 
 

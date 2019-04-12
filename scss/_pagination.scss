@@ -30,6 +30,8 @@
 }
 
 .page-item {
+
+  // for switching Between RTL and LTR mode
   @if $framework-direction == rtl {
     &:last-child {
       .page-link {

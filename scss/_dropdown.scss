@@ -13,6 +13,7 @@
   @include caret;
 }
 
+// for switching Between RTL and LTR mode
 @if $framework-direction == rtl {
 
   // The dropdown menu

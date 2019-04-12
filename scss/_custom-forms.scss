@@ -7,6 +7,7 @@
 //
 // Base class takes care of all the key behavioral aspects.
 
+// for switching Between RTL and LTR mode
 @if $framework-direction == rtl {
   .custom-control {
     position: relative;
@@ -86,6 +87,7 @@
   margin-bottom: 0;
   vertical-align: top;
 
+  // for switching Between RTL and LTR mode
   @if $framework-direction == rtl {
     // Background-color and (when enabled) gradient
     &::before {

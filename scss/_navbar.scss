@@ -39,6 +39,7 @@
 //
 // Used for brand, project, or site names.
 
+// for switching Between RTL and LTR mode
 @if $framework-direction == rtl {
   .navbar-brand {
     display: inline-block;
@@ -74,6 +75,7 @@
 //
 // Custom navbar navigation (doesn't require `.nav`, but does make use of `.nav-link`).
 
+// for switching Between RTL and LTR mode
 @if $framework-direction == rtl {
   .navbar-nav {
     display: flex;

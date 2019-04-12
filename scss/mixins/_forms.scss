@@ -87,6 +87,8 @@
   }
 
   .custom-select {
+
+    // for switching Between RTL and LTR mode
     @if $framework-direction == rtl {
       .was-validated &:#{$state},
       &.is-#{$state} {

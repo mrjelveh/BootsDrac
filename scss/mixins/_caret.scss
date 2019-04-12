@@ -29,6 +29,8 @@
   @if $enable-caret {
     &::after {
       display: inline-block;
+
+      // for switching Between RTL and LTR mode
       @if $framework-direction == rtl {
         margin-right: $caret-spacing;
       } @else {
