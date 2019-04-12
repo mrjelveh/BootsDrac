@@ -213,6 +213,7 @@
 .custom-switch {
   padding-left: $custom-switch-width + $custom-control-gutter;
 
+  // for switching Between RTL and LTR mode
   .custom-control-label {
     @if $framework-direction == rtl {
       &::before {
@@ -276,6 +277,7 @@
 // https://primer.github.io/.
 //
 
+// for switching Between RTL and LTR mode
 @if $framework-direction == rtl {
   .custom-select {
     display: inline-block;
@@ -391,6 +393,7 @@
   }
 }
 
+// for switching Between RTL and LTR mode
 @if $framework-direction == rtl {
   .custom-select-sm {
     height: $custom-select-height-sm;
@@ -483,6 +486,7 @@
   @include border-radius($custom-file-border-radius);
   @include box-shadow($custom-file-box-shadow);
 
+  // for switching Between RTL and LTR mode
   @if $framework-direction == rtl {
     &::after {
       position: absolute;
@@ -634,6 +638,7 @@
     @include border-radius($custom-range-track-border-radius);
   }
 
+  // for switching Between RTL and LTR mode
   @if $framework-direction == rtl {
     &::-ms-fill-upper {
       margin-left: 15px; // arbitrary?

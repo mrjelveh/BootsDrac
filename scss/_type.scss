@@ -92,6 +92,7 @@ mark,
 .list-inline-item {
   display: inline-block;
 
+  // for switching Between RTL and LTR mode
   @if $framework-direction == rtl {
     &:not(:first-child) {
       margin-right: $list-inline-padding;
