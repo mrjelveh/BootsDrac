@@ -44,5 +44,9 @@
 @import "spinners";
 @import "utilities";
 @import "print";
-@import "helper";
+
+// BS-Addons by MohammadReza Jelveh
+@import "vendor/bs-addons/addons-variables";
+@import "vendor/bs-addons/addons-mixins";
+@import "vendor/bs-addons/addons-main";
 
