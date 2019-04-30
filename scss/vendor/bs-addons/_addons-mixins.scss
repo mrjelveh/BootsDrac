@@ -74,7 +74,13 @@
 }
 
 
-@mixin pagination-variant($background, $border, $hover-background: lighten($background, 10%), $hover-border: lighten($border, 10%), $active-background: lighten($background, 10%), $active-border: lighten($border, 12.5%)) {
+@mixin pagination-variant($background,
+      $border,
+      $hover-background: lighten($background, 10%),
+      $hover-border: lighten($border, 10%),
+      $active-background: lighten($background, 10%),
+      $active-border: lighten($border, 12.5%)
+) {
   .page-link {
     color: $white; //color-yiq($hover-background)
     @include gradient-bg($background);

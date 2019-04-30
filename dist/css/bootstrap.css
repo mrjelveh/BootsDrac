@@ -3481,10 +3481,10 @@ input[type="button"].btn-block {
   padding: 0.75rem 1.5rem;
   font-size: 1.25rem;
   line-height: 1.5; }
-.pagination-lg .page-item:first-child .page-link {
+.pagination-lg .page-item:last-child .page-link {
   border-top-left-radius: 0.3rem;
   border-bottom-left-radius: 0.3rem; }
-.pagination-lg .page-item:last-child .page-link {
+.pagination-lg .page-item:first-child .page-link {
   border-top-right-radius: 0.3rem;
   border-bottom-right-radius: 0.3rem; }
 
@@ -3492,10 +3492,10 @@ input[type="button"].btn-block {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5; }
-.pagination-sm .page-item:first-child .page-link {
+.pagination-sm .page-item:last-child .page-link {
   border-top-left-radius: 0.2rem;
   border-bottom-left-radius: 0.2rem; }
-.pagination-sm .page-item:last-child .page-link {
+.pagination-sm .page-item:first-child .page-link {
   border-top-right-radius: 0.2rem;
   border-bottom-right-radius: 0.2rem; }
 
