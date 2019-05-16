@@ -8272,13 +8272,13 @@ a.text-dark:hover, a.text-dark:focus {
     border-bottom-left-radius: .8rem;
     border-top-left-radius: .8rem; }
 
-.btn-rounded, .input-rounded {
+.btn-rounded, .input-rounded, input.rounded-pill {
   padding-left: 1.2rem;
   padding-right: 1.2rem;
   border-radius: 10rem; }
-  .btn-rounded.btn-lg, .btn-group-lg > .btn-rounded.btn, .btn-rounded.input-lg, .input-rounded.btn-lg, .btn-group-lg > .input-rounded.btn, .input-rounded.input-lg {
+  .btn-rounded.btn-lg, .btn-group-lg > .btn-rounded.btn, .btn-rounded.input-lg, .input-rounded.btn-lg, .btn-group-lg > .input-rounded.btn, .input-rounded.input-lg, input.rounded-pill.btn-lg, .btn-group-lg > input.rounded-pill.btn, input.rounded-pill.input-lg {
     border-radius: 15rem; }
-  .btn-rounded.btn-sm, .btn-group-sm > .btn-rounded.btn, .btn-rounded.input-sm, .input-rounded.btn-sm, .btn-group-sm > .input-rounded.btn, .input-rounded.input-sm {
+  .btn-rounded.btn-sm, .btn-group-sm > .btn-rounded.btn, .btn-rounded.input-sm, .input-rounded.btn-sm, .btn-group-sm > .input-rounded.btn, .input-rounded.input-sm, input.rounded-pill.btn-sm, .btn-group-sm > input.rounded-pill.btn, input.rounded-pill.input-sm {
     border-radius: 6rem; }
 
 .btn-icon {
