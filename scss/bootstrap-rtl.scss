@@ -9,8 +9,7 @@
 
 
 // change the variable to RTL or LTR for changing framework direction
-$framework-direction: ltr;
-
+$framework-direction: rtl;
 
 @import "functions";
 @import "variables"; // note: it's originaly from BS4

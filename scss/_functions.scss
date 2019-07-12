@@ -2,8 +2,6 @@
 //
 // Utility mixins and functions for evaluating source code across our variables, maps, and mixins.
 
-// change the variable to RTL or LTR for changing framework direction
-$framework-direction: rtl;
 
 // Ascending
 // Used to evaluate Sass maps like our grid breakpoints.

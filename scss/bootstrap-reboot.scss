@@ -7,6 +7,10 @@
  * Licensed under MIT (https://github.com/mrjelveh/Bootstrap-Dark/blob/master/LICENSE)
  */
 
+
+// change the variable to RTL or LTR for changing framework direction
+$framework-direction: rtl;
+
 @import "functions";
 @import "variables";
 @import "mixins";

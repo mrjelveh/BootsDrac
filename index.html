@@ -12,6 +12,11 @@
 <body>
 <!-------------------------------------------------------kitchen sink------------------------------------------>
 <div class="container-fluid pb-5">
+
+    <a href="#" onclick="changeCSS('dist/css/bootstrap-rtl-dark.css', 0);">bootstrap-rtl-dark</a>
+    <a href="#" onclick="changeCSS('dist/css/bootstrap-rtl.css', 0);">bootstrap-rtl</a>
+    <a href="#" onclick="changeCSS('dist/css/bootstrap-dark.css', 0);">bootstrap-dark</a>
+    <a href="#" onclick="changeCSS('dist/css/bootstrap.css', 0);">bootstrap</a>
     <!-- Brand color  -->
     <div class="container-fluid example-container mt-5" data-category="brand-color">
         <h1 googl="true">Brand color</h1>
@@ -2559,6 +2564,22 @@
         $('[data-toggle="popover"]').popover();
         $('[data-toggle="tooltip"]').tooltip()
     })
+
+
+
+    // just for changing css style
+
+    function changeCSS(cssFile, cssLinkIndex) {
+
+            var oldlink = document.getElementsByTagName("link").item(cssLinkIndex);
+
+            var newlink = document.createElement("link");
+            newlink.setAttribute("rel", "stylesheet");
+            newlink.setAttribute("type", "text/css");
+            newlink.setAttribute("href", cssFile);
+
+            document.getElementsByTagName("head").item(0).replaceChild(newlink, oldlink);
+        }
 </script>
 </body>
 </html>
