@@ -143,7 +143,11 @@
   .close {
     padding: $modal-header-padding;
     // auto on the left force icon to the right even when there is no .modal-title
-    margin: (-$modal-header-padding-y) (-$modal-header-padding-x) (-$modal-header-padding-y) auto;
+    @if $framework-direction == rtl {
+      margin: (-$modal-header-padding-y) (-$modal-header-padding-x) auto (-$modal-header-padding-y);
+    } @else {
+      margin: (-$modal-header-padding-y) (-$modal-header-padding-x) (-$modal-header-padding-y) auto;
+    }
   }
 }
 
@@ -173,8 +177,13 @@
   @include border-bottom-radius($modal-content-border-radius);
 
   // Easily place margin between footer elements
-  > :not(:first-child) { margin-left: .25rem; }
-  > :not(:last-child) { margin-right: .25rem; }
+  @if $framework-direction == rtl {
+    > :not(:last-child) { margin-left: .25rem; }
+    > :not(:first-child) { margin-right: .25rem; }
+  } @else {
+    > :not(:first-child) { margin-left: .25rem; }
+    > :not(:last-child) { margin-right: .25rem; }
+  }
 }
 
 // Measure scrollbar width for padding body during modal show/hide

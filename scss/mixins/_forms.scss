@@ -56,11 +56,19 @@
       border-color: $color;
 
       @if $enable-validation-icons {
-        padding-right: $input-height-inner;
-        background-image: $icon;
-        background-repeat: no-repeat;
-        background-position: center right $input-height-inner-quarter;
-        background-size: $input-height-inner-half $input-height-inner-half;
+        @if $framework-direction == rtl {
+          padding-left: $input-height-inner;
+          background-image: $icon;
+          background-repeat: no-repeat;
+          background-position: center left $input-height-inner-quarter;
+          background-size: $input-height-inner-half $input-height-inner-half;
+        } @else {
+          padding-right: $input-height-inner;
+          background-image: $icon;
+          background-repeat: no-repeat;
+          background-position: center right $input-height-inner-quarter;
+          background-size: $input-height-inner-half $input-height-inner-half;
+        }
       }
 
       &:focus {
