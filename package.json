@@ -1,5 +1,5 @@
 {
-  "name": "bootsdrac (with RTL and theme)",
+  "name": "bootsdrac",
   "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
   "version": "4.3.1",
   "version_short": "4.3",
@@ -90,10 +90,10 @@
   "main": "dist/js/bootstrap",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/twbs/bootstrap.git"
+    "url": "git+https://github.com/mrjelveh/Bootsdrac.git"
   },
   "bugs": {
-    "url": "https://github.com/twbs/bootstrap/issues"
+    "url": "https://github.com/mrjelveh/bootsdrac/issues"
   },
   "license": "MIT",
   "dependencies": {},
