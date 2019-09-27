@@ -6,9 +6,9 @@
 <h1 align="center">
 	Bootstrap 4.3 RTL With Dark Mode
 <h1>
-<h4 align="center">
+<h2 align="center">
   BOOTS🧛‍♂️
-</h4>
+</h2>
 
 ## What's included  
   
