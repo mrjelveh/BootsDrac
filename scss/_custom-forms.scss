@@ -211,50 +211,55 @@
 // Tweak a few things for switches
 
 .custom-switch {
-  padding-left: $custom-switch-width + $custom-control-gutter;
+
 
   // for switching Between RTL and LTR mode
-  .custom-control-label {
-    @if $framework-direction == rtl {
-      &::before {
-        right: -($custom-switch-width + $custom-control-gutter);
-        width: $custom-switch-width;
-        pointer-events: all;
-        // stylelint-disable-next-line property-blacklist
-        border-radius: $custom-switch-indicator-border-radius;
-      }
 
-      &::after {
-        top: calc(#{(($font-size-base * $line-height-base - $custom-control-indicator-size) / 2)} + #{$custom-control-indicator-border-width * 2});
-        right: calc(#{-($custom-switch-width + $custom-control-gutter)} + #{$custom-control-indicator-border-width * 2});
-        width: $custom-switch-indicator-size;
-        height: $custom-switch-indicator-size;
-        background-color: $custom-control-indicator-border-color;
-        // stylelint-disable-next-line property-blacklist
-        border-radius: $custom-switch-indicator-border-radius;
-        @include transition(transform .15s ease-in-out, $custom-forms-transition);
+    @if $framework-direction == rtl {
+      padding-right: $custom-switch-width + $custom-control-gutter;
+      .custom-control-label {
+        &::before {
+          right: -($custom-switch-width + $custom-control-gutter + 0.04);
+          width: $custom-switch-width;
+          pointer-events: all;
+          // stylelint-disable-next-line property-blacklist
+          border-radius: $custom-switch-indicator-border-radius;
+        }
+
+        &::after {
+          top: calc(#{(($font-size-base * $line-height-base - $custom-control-indicator-size) / 2)} + #{$custom-control-indicator-border-width * 2});
+          left: calc(#{-($custom-switch-width + $custom-control-gutter)} + #{$custom-control-indicator-border-width * 2});
+          width: $custom-switch-indicator-size;
+          height: $custom-switch-indicator-size;
+          background-color: $custom-control-indicator-border-color;
+          // stylelint-disable-next-line property-blacklist
+          border-radius: $custom-switch-indicator-border-radius;
+          @include transition(transform .15s ease-in-out, $custom-forms-transition);
+        }
       }
     } @else {
-      &::before {
-        left: -($custom-switch-width + $custom-control-gutter);
-        width: $custom-switch-width;
-        pointer-events: all;
-        // stylelint-disable-next-line property-blacklist
-        border-radius: $custom-switch-indicator-border-radius;
-      }
+      padding-left: $custom-switch-width + $custom-control-gutter;
+      .custom-control-label {
+        &::before {
+          left: -($custom-switch-width + $custom-control-gutter);
+          width: $custom-switch-width;
+          pointer-events: all;
+          // stylelint-disable-next-line property-blacklist
+          border-radius: $custom-switch-indicator-border-radius;
+        }
 
-      &::after {
-        top: calc(#{(($font-size-base * $line-height-base - $custom-control-indicator-size) / 2)} + #{$custom-control-indicator-border-width * 2});
-        left: calc(#{-($custom-switch-width + $custom-control-gutter)} + #{$custom-control-indicator-border-width * 2});
-        width: $custom-switch-indicator-size;
-        height: $custom-switch-indicator-size;
-        background-color: $custom-control-indicator-border-color;
-        // stylelint-disable-next-line property-blacklist
-        border-radius: $custom-switch-indicator-border-radius;
-        @include transition(transform .15s ease-in-out, $custom-forms-transition);
+        &::after {
+          top: calc(#{(($font-size-base * $line-height-base - $custom-control-indicator-size) / 2)} + #{$custom-control-indicator-border-width * 2});
+          left: calc(#{-($custom-switch-width + $custom-control-gutter)} + #{$custom-control-indicator-border-width * 2});
+          width: $custom-switch-indicator-size;
+          height: $custom-switch-indicator-size;
+          background-color: $custom-control-indicator-border-color;
+          // stylelint-disable-next-line property-blacklist
+          border-radius: $custom-switch-indicator-border-radius;
+          @include transition(transform .15s ease-in-out, $custom-forms-transition);
+        }
       }
     }
-  }
 
   .custom-control-input:checked ~ .custom-control-label {
     &::after {

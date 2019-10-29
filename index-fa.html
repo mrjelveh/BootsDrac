@@ -5,11 +5,10 @@
     <title>بوت‌استرپ ۴ </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="stylesheet" href="dist/css/bootstrap-rtl.css" media="screen">
+    <link id="styleLink" rel="stylesheet" href="dist/css/bootstrap-rtl-dark.css" media="screen">
     <link href="https://cdn.rawgit.com/rastikerdar/sahel-font/v1.0.0-alpha23/dist/font-face.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="demo/custom.min.css">
-    <link rel="icon" sizes="32x32" href="favicon.ico">
-    <script></script>
+    
 </head>
 <body class="rtl">
     <div class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
@@ -23,12 +22,17 @@
                     <li class="nav-item">
                       <a class="nav-link" href="./index.html">Kitchen sink</a>
                     </li>
-                </ul>
-                <ul class="nav navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="https://github.com/mrjelveh/bootsdrac" target="_blank">گیت هاب</a>
+                      <a class="nav-link" href="https://github.com/mrjelveh/bootsdrac" target="_blank">گیت هاب</a>
                     </li>
                 </ul>
+
+                <div class="mr-auto bg-dark rounded p-2">
+                    <div id="switch-change" class="custom-control custom-switch text-white">
+                        <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                        <label class="custom-control-label" for="customSwitch1">روشن/خاموش</label>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -1364,6 +1368,15 @@
             </div>
             <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
             <script src="dist/js/bootstrap.bundle.min.js"></script>
+            <script>
+                $('#customSwitch1').on('change', function () { 
+                    if($('#styleLink').attr('href') == 'dist/css/bootstrap-rtl-dark.css') {
+                         $('#styleLink').attr('href', 'dist/css/bootstrap-rtl.css')
+                    } else {
+                        $('#styleLink').attr('href', 'dist/css/bootstrap-rtl-dark.css')
+                    }
+                 });
+            </script>
             <script src="demo/custom.js"></script>
         </body>
         </html>

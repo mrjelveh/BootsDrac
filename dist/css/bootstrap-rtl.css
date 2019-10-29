@@ -2703,15 +2703,15 @@ input[type="button"].btn-block {
   background-color: rgba(0, 123, 255, 0.5); }
 
 .custom-switch {
-  padding-left: 2.25rem; }
+  padding-right: 2.25rem; }
   .custom-switch .custom-control-label::before {
-    right: -2.25rem;
+    right: -2.29rem;
     width: 1.75rem;
     pointer-events: all;
     border-radius: 0.5rem; }
   .custom-switch .custom-control-label::after {
     top: calc(0.25rem + 2px);
-    right: calc(-2.25rem + 2px);
+    left: calc(-2.25rem + 2px);
     width: calc(1rem - 4px);
     height: calc(1rem - 4px);
     background-color: #adb5bd;

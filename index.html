@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="dist/css/bootstrap.css">
+    <link id="styleLink" rel="stylesheet" href="dist/css/bootstrap-rtl-dark.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <title>kitchen sink</title>
 </head>
@@ -16,30 +16,224 @@
         </div>
     </div>
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
+        <a class="navbar-brand" href="https://github.com/mrjelveh/BootsDrac/">
+            <img style="height: 34px;width: auto;" src="https://camo.githubusercontent.com/48a4b5a8da5325f336ad0bec94784492a030fb24/68747470733a2f2f696d616765732d7769786d702d6564333061383662386334636138383737373335393463322e7769786d702e636f6d2f662f31386261646164362d353436652d343534362d383532302d6139633434613862323435312f646468306563722d61373030376139612d346231642d343461662d623933302d6161396435303634323863622e706e673f746f6b656e3d65794a30655841694f694a4b563151694c434a68624763694f694a49557a49314e694a392e65794a7a645749694f694a31636d3436595842774f6a646c4d4751784f4467354f4449794e6a517a4e7a4e684e5759775a4451784e5756684d4751794e6d55774969776961584e7a496a6f6964584a754f6d467763446f335a54426b4d5467344f5467794d6a59304d7a637a5954566d4d4751304d54566c5954426b4d6a5a6c4d434973496d39696169493657317437496e4268644767694f694a634c325a634c7a4534596d466b595751324c5455304e6d55744e4455304e6930344e5449774c574535597a5130595468694d6a51314d5677765a47526f4d47566a636931684e7a41774e32453559533030596a466b4c54513059575974596a6b7a4d43316859546c6b4e5441324e444934593249756347356e496e3164585377695958566b496a7062496e5679626a707a5a584a3261574e6c4f6d5a70624755755a473933626d7876595751695858302e565a59324a4151414f343972783338717a3551754e5345564b50476c78526f6b72784a484b4d6a555f4c55" alt="">
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a  class="nav-link" href="#" onclick="changeCSS('dist/css/bootstrap-rtl-dark.css', 0);">bootstrap-rtl-dark</a>
+                    <a  class="nav-link" href="#" onclick="changeCSS('dist/css/bootstrap-rtl-dark.css');">bootstrap-rtl-dark</a>
                 </li>
                 <li class="nav-item">
-                    <a  class="nav-link" href="#" onclick="changeCSS('dist/css/bootstrap-rtl.css', 0);">bootstrap-rtl</a>
+                    <a  class="nav-link" href="#" onclick="changeCSS('dist/css/bootstrap-rtl.css');">bootstrap-rtl</a>
                 </li>
                 <li class="nav-item">
-                    <a  class="nav-link" href="#" onclick="changeCSS('dist/css/bootstrap-dark.css', 0);">bootstrap-dark</a>
+                    <a  class="nav-link" href="#" onclick="changeCSS('dist/css/bootstrap-dark.css');">bootstrap-dark</a>
                 </li>
                 <li class="nav-item">
-                    <a  class="nav-link" href="#" onclick="changeCSS('dist/css/bootstrap.css', 0);">bootstrap</a>
+                    <a  class="nav-link" href="#" onclick="changeCSS('dist/css/bootstrap.css');">bootstrap</a>
                 </li>
             </ul>
+            <a id="navLink"class="mr-auto btn btn-light" href="./index-fa.html">Just Persian</a>
         </div>
     </nav>
 <!-------------------------------------------------------kitchen sink------------------------------------------>
 <div class="container-fluid pb-5 pt-2">
-    
+        <!-- Buttons  -->
+        <div class="container-fluid example-container" data-category="buttons">
+            <h1>Buttons</h1>
+            <div class="mt-3 mb-5">
+                <h3>Default buttons</h3>
+                <button type="button" class="btn btn-primary">Primary</button>
+                <button type="button" class="btn btn-secondary">Secondary</button>
+                <button type="button" class="btn btn-info">Info</button>
+                <button type="button" class="btn btn-success">Success</button>
+                <button type="button" class="btn btn-warning">Warning</button>
+                <button type="button" class="btn btn-danger">Danger</button>
+                <button type="button" class="btn btn-light">Light</button>
+                <button type="button" class="btn btn-dark">Dark</button>
+                <button type="button" class="btn btn-link">Link</button>
+            </div>
+            <div class="mt-3 mb-5">
+                <h3>Default Rounded buttons</h3>
+                <button type="button" class="btn btn-rounded btn-primary">Primary</button>
+                <button type="button" class="btn btn-rounded btn-secondary">Secondary</button>
+                <button type="button" class="btn btn-rounded btn-info">Info</button>
+                <button type="button" class="btn btn-rounded btn-success">Success</button>
+                <button type="button" class="btn btn-rounded btn-warning">Warning</button>
+                <button type="button" class="btn btn-rounded btn-danger">Danger</button>
+                <button type="button" class="btn btn-rounded btn-light">Light</button>
+                <button type="button" class="btn btn-rounded btn-dark">Dark</button>
+                <button type="button" class="btn btn-rounded btn-link">Link</button>
+            </div>
+        
+            <div class="mt-3 mb-5">
+                <h3>Default Rounded buttons</h3>
+                <button type="button" class="btn btn-icon btn-primary"><span class="fa fa-biohazard"></span></button>
+                <button type="button" class="btn btn-icon btn-secondary"><span class="fa fa-biohazard"></span></button>
+                <button type="button" class="btn btn-icon btn-info"><span class="fa fa-biohazard"></span></button>
+                <button type="button" class="btn btn-icon btn-success"><span class="fa fa-biohazard"></span></button>
+                <button type="button" class="btn btn-icon btn-warning"><span class="fa fa-biohazard"></span></button>
+                <button type="button" class="btn btn-icon btn-danger"><span class="fa fa-biohazard"></span></button>
+                <button type="button" class="btn btn-icon btn-light"><span class="fa fa-biohazard"></span></button>
+                <button type="button" class="btn btn-icon btn-dark"><span class="fa fa-biohazard"></span></button>
+                <button type="button" class="btn btn-icon btn-link"><span class="fa fa-biohazard"></span></button>
+            </div>
+        
+        
+            <div class="mt-3 mb-5">
+                <h3>Default Rounded buttons</h3>
+                <button type="button" class="btn btn-icon btn-rounded btn-primary"><span
+                        class="fa fa-biohazard"></span></button>
+                <button type="button" class="btn btn-icon btn-rounded btn-secondary"><span
+                        class="fa fa-biohazard"></span></button>
+                <button type="button" class="btn btn-icon btn-rounded btn-info"><span class="fa fa-biohazard"></span></button>
+                <button type="button" class="btn btn-icon btn-rounded btn-success"><span
+                        class="fa fa-biohazard"></span></button>
+                <button type="button" class="btn btn-icon btn-rounded btn-warning"><span
+                        class="fa fa-biohazard"></span></button>
+                <button type="button" class="btn btn-icon btn-rounded btn-danger"><span class="fa fa-biohazard"></span></button>
+                <button type="button" class="btn btn-icon btn-rounded btn-light"><span class="fa fa-biohazard"></span></button>
+                <button type="button" class="btn btn-icon btn-rounded btn-dark"><span class="fa fa-biohazard"></span></button>
+                <button type="button" class="btn btn-icon btn-rounded btn-link"><span class="fa fa-biohazard"></span></button>
+            </div>
+        
+        
+            <div class="mt-3 mb-5">
+                <h3>Default Rounded buttons</h3>
+                <button type="button" class="btn btn-icon with-text btn-rounded btn-primary"><span
+                        class="fa fa-biohazard btn-icon-item"></span><span class="btn-icon-item">its some text</span></button>
+                <button type="button" class="btn btn-icon with-text btn-rounded btn-secondary"><span
+                        class="fa fa-biohazard btn-icon-item"></span><span class="btn-icon-item">its some text</span></button>
+                <button type="button" class="btn btn-icon with-text btn-rounded btn-info"><span
+                        class="fa fa-biohazard btn-icon-item"></span><span class="btn-icon-item">its some text</span></button>
+                <button type="button" class="btn btn-icon with-text btn-rounded btn-success"><span
+                        class="fa fa-biohazard btn-icon-item"></span><span class="btn-icon-item">its some text</span></button>
+                <button type="button" class="btn btn-icon with-text btn-rounded btn-warning"><span
+                        class="fa fa-biohazard btn-icon-item"></span><span class="btn-icon-item">its some text</span></button>
+                <button type="button" class="btn btn-icon with-text btn-rounded btn-danger"><span
+                        class="fa fa-biohazard btn-icon-item"></span><span class="btn-icon-item">its some text</span></button>
+                <button type="button" class="btn btn-icon with-text btn-rounded btn-light"><span
+                        class="fa fa-biohazard btn-icon-item"></span><span class="btn-icon-item">its some text</span></button>
+                <button type="button" class="btn btn-icon with-text btn-rounded btn-dark"><span
+                        class="fa fa-biohazard btn-icon-item"></span><span class="btn-icon-item">its some text</span></button>
+                <button type="button" class="btn btn-icon with-text btn-rounded btn-link"><span
+                        class="fa fa-biohazard btn-icon-item"></span><span class="btn-icon-item">its some text</span></button>
+            </div>
+        
+            <div class="mt-3 mb-5">
+                <h3>Buttons with outline</h3>
+                <button type="button" class="btn btn-outline-primary">Primary</button>
+                <button type="button" class="btn btn-outline-secondary">Secondary</button>
+                <button type="button" class="btn btn-outline-info">Info</button>
+                <button type="button" class="btn btn-outline-success">Success</button>
+                <button type="button" class="btn btn-outline-warning">Warning</button>
+                <button type="button" class="btn btn-outline-danger">Danger</button>
+                <button type="button" class="btn btn-outline-light">Light</button>
+                <button type="button" class="btn btn-outline-dark">Dark</button>
+            </div>
+        
+            <div class="mt-3 mb-5">
+                <h3>Buttons with outline</h3>
+                <button type="button" class="btn btn-rounded btn-outline-primary">Primary</button>
+                <button type="button" class="btn btn-rounded btn-outline-secondary">Secondary</button>
+                <button type="button" class="btn btn-rounded btn-outline-info">Info</button>
+                <button type="button" class="btn btn-rounded btn-outline-success">Success</button>
+                <button type="button" class="btn btn-rounded btn-outline-warning">Warning</button>
+                <button type="button" class="btn btn-rounded btn-outline-danger">Danger</button>
+                <button type="button" class="btn btn-rounded btn-outline-light">Light</button>
+                <button type="button" class="btn btn-rounded btn-outline-dark">Dark</button>
+            </div>
+        
+            <div class="mt-3 mb-5">
+                <h3>Buttons with outline</h3>
+                <button type="button" class="btn btn-rounded btn-inverse-primary">Primary</button>
+                <button type="button" class="btn btn-rounded btn-inverse-secondary">Secondary</button>
+                <button type="button" class="btn btn-rounded btn-inverse-info">Info</button>
+                <button type="button" class="btn btn-rounded btn-inverse-success">Success</button>
+                <button type="button" class="btn btn-rounded btn-inverse-warning">Warning</button>
+                <button type="button" class="btn btn-rounded btn-inverse-danger">Danger</button>
+                <button type="button" class="btn btn-rounded btn-inverse-light">Light</button>
+                <button type="button" class="btn btn-rounded btn-inverse-dark">Dark</button>
+            </div>
+        
+            <div class="mt-3 mb-5">
+                <h3>Buttons with outline</h3>
+                <button type="button" class="btn btn-social-icon btn-dribbble"><i class="fa fa-biohazard"></i></button>
+            </div>
+        
+        
+        
+            <div class="mt-3 mb-5">
+                <h3>Buttons sizes</h3>
+                <button type="button" class="btn btn-success btn-sm">Small</button>
+                <button type="button" class="btn btn-success">Default</button>
+                <button type="button" class="btn btn-success btn-lg">Large</button>
+                <br>
+                <br>
+        
+                <button type="button" class="btn btn-rounded btn-success btn-sm">Small rounded</button>
+                <button type="button" class="btn btn-rounded btn-success">Default rounded</button>
+                <button type="button" class="btn btn-rounded btn-success btn-lg">Large rounded</button>
+                <br>
+                <br>
+        
+                <button type="button" class="btn btn-danger btn-lg btn-block">Block level button</button>
+            </div>
+        
+        
+        
+            <div class="mt-3 mb-5">
+                <h3>Disabled button</h3>
+                <p>
+                    <a href="javascript:void(0);" class="btn btn-primary btn-lg disabled" role="button">The 'a' Element</a>
+                </p>
+        
+                <p>
+                    <button type="button" class="btn btn-lg btn-primary" disabled="disabled">The 'button' Element</button>
+                </p>
+        
+                <p>
+                    <input type="button" class="btn btn-lg btn-primary" disabled="disabled" value="The 'input' Element">
+                </p>
+            </div>
+        
+            <div class="mt-3 mb-5">
+                <h3>Checkbox buttons</h3>
+                <div class="btn-group" data-toggle="buttons">
+                    <label class="btn btn-primary active">
+                        <input type="checkbox" checked="" autocomplete="off"> Boots
+                    </label>
+                    <label class="btn btn-primary">
+                        <input type="checkbox" autocomplete="off"> Shoes
+                    </label>
+                    <label class="btn btn-primary">
+                        <input type="checkbox" autocomplete="off"> Feet
+                    </label>
+                </div>
+            </div>
+        
+        
+        
+            <div class="mt-3 mb-5">
+                <h3>Radio buttons</h3>
+                <div class="btn-group" data-toggle="buttons">
+                    <label class="btn btn-primary">
+                        <input type="radio" name="options" id="boots" autocomplete="off" checked=""> Boots
+                    </label>
+                    <label class="btn btn-primary">
+                        <input type="radio" name="options" id="shoes" autocomplete="off"> Shoes
+                    </label>
+                    <label class="btn btn-primary">
+                        <input type="radio" name="options" id="feet" autocomplete="off"> Feet
+                    </label>
+                </div>
+            </div>
+        </div>
     <!-- Brand color  -->
     <div class="container-fluid example-container mt-5" data-category="brand-color">
         <h1 googl="true">Brand color</h1>
@@ -198,185 +392,7 @@
 
 
 
-    <!-- Buttons  -->
-    <div class="container-fluid example-container" data-category="buttons">
-        <h1>Buttons</h1>
 
-        <div class="mt-3 mb-5">
-            <h3>Default buttons</h3>
-            <button type="button" class="btn btn-primary">Primary</button>
-            <button type="button" class="btn btn-secondary">Secondary</button>
-            <button type="button" class="btn btn-info">Info</button>
-            <button type="button" class="btn btn-success">Success</button>
-            <button type="button" class="btn btn-warning">Warning</button>
-            <button type="button" class="btn btn-danger">Danger</button>
-            <button type="button" class="btn btn-light">Light</button>
-            <button type="button" class="btn btn-dark">Dark</button>
-            <button type="button" class="btn btn-link">Link</button>
-        </div>
-        <div class="mt-3 mb-5">
-            <h3>Default Rounded buttons</h3>
-            <button type="button" class="btn btn-rounded btn-primary">Primary</button>
-            <button type="button" class="btn btn-rounded btn-secondary">Secondary</button>
-            <button type="button" class="btn btn-rounded btn-info">Info</button>
-            <button type="button" class="btn btn-rounded btn-success">Success</button>
-            <button type="button" class="btn btn-rounded btn-warning">Warning</button>
-            <button type="button" class="btn btn-rounded btn-danger">Danger</button>
-            <button type="button" class="btn btn-rounded btn-light">Light</button>
-            <button type="button" class="btn btn-rounded btn-dark">Dark</button>
-            <button type="button" class="btn btn-rounded btn-link">Link</button>
-        </div>
-
-        <div class="mt-3 mb-5">
-            <h3>Default Rounded buttons</h3>
-            <button type="button" class="btn btn-icon btn-primary"><span class="fa fa-biohazard"></span></button>
-            <button type="button" class="btn btn-icon btn-secondary"><span class="fa fa-biohazard"></span></button>
-            <button type="button" class="btn btn-icon btn-info"><span class="fa fa-biohazard"></span></button>
-            <button type="button" class="btn btn-icon btn-success"><span class="fa fa-biohazard"></span></button>
-            <button type="button" class="btn btn-icon btn-warning"><span class="fa fa-biohazard"></span></button>
-            <button type="button" class="btn btn-icon btn-danger"><span class="fa fa-biohazard"></span></button>
-            <button type="button" class="btn btn-icon btn-light"><span class="fa fa-biohazard"></span></button>
-            <button type="button" class="btn btn-icon btn-dark"><span class="fa fa-biohazard"></span></button>
-            <button type="button" class="btn btn-icon btn-link"><span class="fa fa-biohazard"></span></button>
-        </div>
-
-
-        <div class="mt-3 mb-5">
-            <h3>Default Rounded buttons</h3>
-            <button type="button" class="btn btn-icon btn-rounded btn-primary"><span class="fa fa-biohazard"></span></button>
-            <button type="button" class="btn btn-icon btn-rounded btn-secondary"><span class="fa fa-biohazard"></span></button>
-            <button type="button" class="btn btn-icon btn-rounded btn-info"><span class="fa fa-biohazard"></span></button>
-            <button type="button" class="btn btn-icon btn-rounded btn-success"><span class="fa fa-biohazard"></span></button>
-            <button type="button" class="btn btn-icon btn-rounded btn-warning"><span class="fa fa-biohazard"></span></button>
-            <button type="button" class="btn btn-icon btn-rounded btn-danger"><span class="fa fa-biohazard"></span></button>
-            <button type="button" class="btn btn-icon btn-rounded btn-light"><span class="fa fa-biohazard"></span></button>
-            <button type="button" class="btn btn-icon btn-rounded btn-dark"><span class="fa fa-biohazard"></span></button>
-            <button type="button" class="btn btn-icon btn-rounded btn-link"><span class="fa fa-biohazard"></span></button>
-        </div>
-
-
-        <div class="mt-3 mb-5">
-            <h3>Default Rounded buttons</h3>
-            <button type="button" class="btn btn-icon with-text btn-rounded btn-primary"><span class="fa fa-biohazard btn-icon-item"></span><span class="btn-icon-item">its some text</span></button>
-            <button type="button" class="btn btn-icon with-text btn-rounded btn-secondary"><span class="fa fa-biohazard btn-icon-item"></span><span class="btn-icon-item">its some text</span></button>
-            <button type="button" class="btn btn-icon with-text btn-rounded btn-info"><span class="fa fa-biohazard btn-icon-item"></span><span class="btn-icon-item">its some text</span></button>
-            <button type="button" class="btn btn-icon with-text btn-rounded btn-success"><span class="fa fa-biohazard btn-icon-item"></span><span class="btn-icon-item">its some text</span></button>
-            <button type="button" class="btn btn-icon with-text btn-rounded btn-warning"><span class="fa fa-biohazard btn-icon-item"></span><span class="btn-icon-item">its some text</span></button>
-            <button type="button" class="btn btn-icon with-text btn-rounded btn-danger"><span class="fa fa-biohazard btn-icon-item"></span><span class="btn-icon-item">its some text</span></button>
-            <button type="button" class="btn btn-icon with-text btn-rounded btn-light"><span class="fa fa-biohazard btn-icon-item"></span><span class="btn-icon-item">its some text</span></button>
-            <button type="button" class="btn btn-icon with-text btn-rounded btn-dark"><span class="fa fa-biohazard btn-icon-item"></span><span class="btn-icon-item">its some text</span></button>
-            <button type="button" class="btn btn-icon with-text btn-rounded btn-link"><span class="fa fa-biohazard btn-icon-item"></span><span class="btn-icon-item">its some text</span></button>
-        </div>
-
-        <div class="mt-3 mb-5">
-            <h3>Buttons with outline</h3>
-            <button type="button" class="btn btn-outline-primary">Primary</button>
-            <button type="button" class="btn btn-outline-secondary">Secondary</button>
-            <button type="button" class="btn btn-outline-info">Info</button>
-            <button type="button" class="btn btn-outline-success">Success</button>
-            <button type="button" class="btn btn-outline-warning">Warning</button>
-            <button type="button" class="btn btn-outline-danger">Danger</button>
-            <button type="button" class="btn btn-outline-light">Light</button>
-            <button type="button" class="btn btn-outline-dark">Dark</button>
-        </div>
-
-        <div class="mt-3 mb-5">
-            <h3>Buttons with outline</h3>
-            <button type="button" class="btn btn-rounded btn-outline-primary">Primary</button>
-            <button type="button" class="btn btn-rounded btn-outline-secondary">Secondary</button>
-            <button type="button" class="btn btn-rounded btn-outline-info">Info</button>
-            <button type="button" class="btn btn-rounded btn-outline-success">Success</button>
-            <button type="button" class="btn btn-rounded btn-outline-warning">Warning</button>
-            <button type="button" class="btn btn-rounded btn-outline-danger">Danger</button>
-            <button type="button" class="btn btn-rounded btn-outline-light">Light</button>
-            <button type="button" class="btn btn-rounded btn-outline-dark">Dark</button>
-        </div>
-
-        <div class="mt-3 mb-5">
-            <h3>Buttons with outline</h3>
-            <button type="button" class="btn btn-rounded btn-inverse-primary">Primary</button>
-            <button type="button" class="btn btn-rounded btn-inverse-secondary">Secondary</button>
-            <button type="button" class="btn btn-rounded btn-inverse-info">Info</button>
-            <button type="button" class="btn btn-rounded btn-inverse-success">Success</button>
-            <button type="button" class="btn btn-rounded btn-inverse-warning">Warning</button>
-            <button type="button" class="btn btn-rounded btn-inverse-danger">Danger</button>
-            <button type="button" class="btn btn-rounded btn-inverse-light">Light</button>
-            <button type="button" class="btn btn-rounded btn-inverse-dark">Dark</button>
-        </div>
-
-        <div class="mt-3 mb-5">
-            <h3>Buttons with outline</h3>
-            <button type="button" class="btn btn-social-icon btn-dribbble"><i class="fa fa-biohazard"></i></button>
-        </div>
-
-
-
-        <div class="mt-3 mb-5">
-            <h3>Buttons sizes</h3>
-            <button type="button" class="btn btn-success btn-sm">Small</button>
-            <button type="button" class="btn btn-success">Default</button>
-            <button type="button" class="btn btn-success btn-lg">Large</button>
-            <br>
-            <br>
-
-            <button type="button" class="btn btn-rounded btn-success btn-sm">Small rounded</button>
-            <button type="button" class="btn btn-rounded btn-success">Default rounded</button>
-            <button type="button" class="btn btn-rounded btn-success btn-lg">Large rounded</button>
-            <br>
-            <br>
-
-            <button type="button" class="btn btn-danger btn-lg btn-block">Block level button</button>
-        </div>
-
-
-
-        <div class="mt-3 mb-5">
-            <h3>Disabled button</h3>
-            <p>
-                <a href="javascript:void(0);" class="btn btn-primary btn-lg disabled" role="button">The 'a' Element</a>
-            </p>
-
-            <p>
-                <button type="button" class="btn btn-lg btn-primary" disabled="disabled">The 'button' Element</button>
-            </p>
-
-            <p>
-                <input type="button" class="btn btn-lg btn-primary" disabled="disabled" value="The 'input' Element">
-            </p>
-        </div>
-
-        <div class="mt-3 mb-5">
-            <h3>Checkbox buttons</h3>
-            <div class="btn-group" data-toggle="buttons">
-                <label class="btn btn-primary active">
-                    <input type="checkbox" checked="" autocomplete="off"> Boots
-                </label>
-                <label class="btn btn-primary">
-                    <input type="checkbox" autocomplete="off"> Shoes
-                </label>
-                <label class="btn btn-primary">
-                    <input type="checkbox" autocomplete="off"> Feet
-                </label>
-            </div>
-        </div>
-
-
-
-        <div class="mt-3 mb-5">
-            <h3>Radio buttons</h3>
-            <div class="btn-group" data-toggle="buttons">
-                <label class="btn btn-primary">
-                    <input type="radio" name="options" id="boots" autocomplete="off" checked=""> Boots
-                </label>
-                <label class="btn btn-primary">
-                    <input type="radio" name="options" id="shoes" autocomplete="off"> Shoes
-                </label>
-                <label class="btn btn-primary">
-                    <input type="radio" name="options" id="feet" autocomplete="off"> Feet
-                </label>
-            </div>
-        </div>
-    </div>
 
     <!-- Forms  -->
     <div class="container-fluid example-container" data-category="forms">
@@ -2596,17 +2612,14 @@
 
     // just for changing css style
 
-    function changeCSS(cssFile, cssLinkIndex) {
+    function changeCSS(cssFile) {
             loading();
-
-            var oldlink = document.getElementsByTagName("link").item(cssLinkIndex);
-
-            var newlink = document.createElement("link");
-            newlink.setAttribute("rel", "stylesheet");
-            newlink.setAttribute("type", "text/css");
-            newlink.setAttribute("href", cssFile);
-
-            document.getElementsByTagName("head").item(0).replaceChild(newlink, oldlink);
+            document.getElementById('styleLink').setAttribute('href',cssFile);
+            if(cssFile.includes('rtl')) {
+                $('#navLink').removeClass('ml-auto').addClass('mr-auto');
+            } else {
+                $('#navLink').removeClass('mr-auto').addClass('ml-auto');
+            }
         }
 </script>
 </body>
