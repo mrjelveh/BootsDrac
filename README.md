@@ -10,7 +10,7 @@
   BOOTS🧛‍♂️
 </h2>
 
-<div align="center"><a target="_blank" href="https://srv-file2.gofile.io/download/GQUt4D/Bootsdrac.gif"><img src="https://srv-file2.gofile.io/download/GQUt4D/Bootsdrac.gif" title="Bootsdrac showcase" /></a></div>
+<div align="center"><a target="_blank" href="./demo/Bootsdrac.gif"><img src="./demo/Bootsdrac.gif" title="Bootsdrac showcase" /></a></div>
 
 ## What's included  
   
