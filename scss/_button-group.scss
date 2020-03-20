@@ -13,7 +13,7 @@
 
     // Bring the hover, focused, and "active" buttons to the front to overlay
     // the borders properly
-    @include hover {
+    @include hover() {
       z-index: 1;
     }
     &:focus,
@@ -106,7 +106,7 @@
   }
 } @else {
   .dropdown-toggle-split {
-    padding-left: $btn-padding-x * .75;
+    padding-right: $btn-padding-x * .75;
     padding-left: $btn-padding-x * .75;
 
     &::after,

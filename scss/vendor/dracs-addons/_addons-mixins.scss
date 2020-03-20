@@ -47,7 +47,7 @@
   &:not(.btn-inverse-light) {
     color: $color;
   }
-  @include hover {
+  @include hover() {
     color: $color-hover;
     background-color: $color;
     border-color: $color;
@@ -86,7 +86,7 @@
     @include gradient-bg($background);
     border-color: $border;
 
-    @include hover {
+    @include hover() {
       color: color-yiq($hover-background);
       @include gradient-bg($hover-background);
       border-color: $hover-border;
@@ -140,6 +140,22 @@
             box-shadow: 0 0 0 $btn-focus-width rgba(mix(color-yiq($background), $border, 15%), .5);
           }
         }
+      }
+    }
+  }
+}
+
+@mixin custom-switch-variant($background) {
+  .custom-control-input {
+    &:checked ~ .custom-control-label {
+      &::before {
+        background-color: $background;
+        border-color: $background;
+      }
+    }
+    &:focus ~ .custom-control-label {
+      &::before {
+        box-shadow: 0 0 0 0.2rem rgba($background, 0.25);
       }
     }
   }

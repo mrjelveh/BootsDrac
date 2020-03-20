@@ -37,7 +37,10 @@
 
 .custom-control-input {
   position: absolute;
+  left: 0;
   z-index: -1; // Put the input behind the label so it doesn't overlay text
+  width: $custom-control-indicator-size;
+  height: ($font-size-base * $line-height-base + $custom-control-indicator-size) / 2;
   opacity: 0;
 
   &:checked ~ .custom-control-label::before {
@@ -67,6 +70,8 @@
     @include box-shadow($custom-control-indicator-active-box-shadow);
   }
 
+  // Use [disabled] and :disabled to work around https://github.com/twbs/bootstrap/issues/28247
+  &[disabled],
   &:disabled {
     ~ .custom-control-label {
       color: $custom-control-label-disabled-color;
@@ -157,7 +162,7 @@
 
   .custom-control-input:checked ~ .custom-control-label {
     &::after {
-      background-image: $custom-checkbox-indicator-icon-checked;
+      background-image: escape-svg($custom-checkbox-indicator-icon-checked);
     }
   }
 
@@ -168,7 +173,7 @@
       @include box-shadow($custom-checkbox-indicator-indeterminate-box-shadow);
     }
     &::after {
-      background-image: $custom-checkbox-indicator-icon-indeterminate;
+      background-image: escape-svg($custom-checkbox-indicator-icon-indeterminate);
     }
   }
 
@@ -194,7 +199,7 @@
 
   .custom-control-input:checked ~ .custom-control-label {
     &::after {
-      background-image: $custom-radio-indicator-icon-checked;
+      background-image: escape-svg($custom-radio-indicator-icon-checked);
     }
   }
 
@@ -217,9 +222,10 @@
 
     @if $framework-direction == rtl {
       padding-right: $custom-switch-width + $custom-control-gutter;
+      
       .custom-control-label {
         &::before {
-          right: -($custom-switch-width + $custom-control-gutter + 0.04);
+          right: -($custom-switch-width + $custom-control-gutter);
           width: $custom-switch-width;
           pointer-events: all;
           // stylelint-disable-next-line property-blacklist
@@ -227,8 +233,9 @@
         }
 
         &::after {
-          top: calc(#{(($font-size-base * $line-height-base - $custom-control-indicator-size) / 2)} + #{$custom-control-indicator-border-width * 2});
-          left: calc(#{-($custom-switch-width + $custom-control-gutter)} + #{$custom-control-indicator-border-width * 2});
+          top: add(($font-size-base * $line-height-base - $custom-control-indicator-size) / 2, $custom-control-indicator-border-width * 2);
+          left: unset;
+          right: add(-($custom-switch-width - $custom-control-gutter), $custom-control-indicator-border-width * -2);
           width: $custom-switch-indicator-size;
           height: $custom-switch-indicator-size;
           background-color: $custom-control-indicator-border-color;
@@ -239,6 +246,7 @@
       }
     } @else {
       padding-left: $custom-switch-width + $custom-control-gutter;
+
       .custom-control-label {
         &::before {
           left: -($custom-switch-width + $custom-control-gutter);
@@ -249,8 +257,8 @@
         }
 
         &::after {
-          top: calc(#{(($font-size-base * $line-height-base - $custom-control-indicator-size) / 2)} + #{$custom-control-indicator-border-width * 2});
-          left: calc(#{-($custom-switch-width + $custom-control-gutter)} + #{$custom-control-indicator-border-width * 2});
+          top: add(($font-size-base * $line-height-base - $custom-control-indicator-size) / 2, $custom-control-indicator-border-width * 2);
+          left: add(-($custom-switch-width + $custom-control-gutter), $custom-control-indicator-border-width * 2);
           width: $custom-switch-indicator-size;
           height: $custom-switch-indicator-size;
           background-color: $custom-control-indicator-border-color;
@@ -339,6 +347,12 @@
     &::-ms-expand {
       display: none;
     }
+    
+    // Remove outline from select box in FF
+    &:-moz-focusring {
+      color: transparent;
+      text-shadow: 0 0 0 $custom-select-color;
+    }
   }
 } @else {
   .custom-select {
@@ -394,6 +408,12 @@
     // Hides the default caret in IE11
     &::-ms-expand {
       display: none;
+    }
+
+    // Remove outline from select box in FF
+    &:-moz-focusring {
+      color: transparent;
+      text-shadow: 0 0 0 $custom-select-color;
     }
   }
 }
@@ -459,6 +479,8 @@
     box-shadow: $custom-file-focus-box-shadow;
   }
 
+  // Use [disabled] and :disabled to work around https://github.com/twbs/bootstrap/issues/28247
+  &[disabled] ~ .custom-file-label,
   &:disabled ~ .custom-file-label {
     background-color: $custom-file-disabled-bg;
   }
@@ -537,7 +559,7 @@
 
 .custom-range {
   width: 100%;
-  height: calc(#{$custom-range-thumb-height} + #{$custom-range-thumb-focus-box-shadow-width * 2});
+  height: add($custom-range-thumb-height, $custom-range-thumb-focus-box-shadow-width * 2);
   padding: 0; // Need to reset padding
   background-color: transparent;
   appearance: none;

@@ -1,8 +1,8 @@
 /*!
- * Bootstrap Reboot v4.3.1 (https://getbootstrap.com/)
- * Copyright 2011-2019 The Bootstrap Authors
- * Copyright 2011-2019 Twitter, Inc.
- * Copyright 2019 MohammadReza Jelveh
+ * Bootstrap Grid v4.4.1 (https://getbootstrap.com/)
+ * Copyright 2011-2020 The Bootstrap Authors
+ * Copyright 2011-2020 Twitter, Inc.
+ * Copyright 2020 MohammadReza Jelveh
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * Licensed under MIT (https://github.com/mrjelveh/Bootstrap-Dark/blob/master/LICENSE)
  */
@@ -31,7 +31,7 @@ body {
   text-align: right;
   background-color: #fff; }
 
-[tabindex="-1"]:focus {
+[tabindex="-1"]:focus:not(:focus-visible) {
   outline: 0 !important; }
 
 hr {
@@ -110,14 +110,12 @@ a {
     color: #0056b3;
     text-decoration: underline; }
 
-a:not([href]):not([tabindex]) {
+a:not([href]) {
   color: inherit;
   text-decoration: none; }
-  a:not([href]):not([tabindex]):hover, a:not([href]):not([tabindex]):focus {
+  a:not([href]):hover {
     color: inherit;
     text-decoration: none; }
-  a:not([href]):not([tabindex]):focus {
-    outline: 0; }
 
 pre,
 code,
@@ -268,5 +266,3 @@ template {
 
 [hidden] {
   display: none !important; }
-
-/*# sourceMappingURL=bootstrap-reboot.css.map */

@@ -27,6 +27,13 @@
   }
 }
 
+//custom switch colors
+@each $color, $value in $theme-colors {
+  .custom-switch-#{$color} {
+    @include custom-switch-variant($value);
+  }
+}
+
 
 ////////////////////////////////////////////////////// CLASSES
 .pagination {
@@ -135,8 +142,54 @@
     .btn-icon-item {
       padding: $btn-padding-y $btn-padding-x;
       justify-self: stretch;
-      &:last-child {
-
+    }
+  }
+}
+.custom-switch {
+  &.custom-switch-lg {
+    
+    // for switching Between RTL and LTR mode
+    @if $framework-direction == rtl {
+      padding-right: ($custom-switch-width + $custom-control-gutter) * 1.5;
+      .custom-control-label {
+        &::before {
+          width: $custom-switch-width * 1.5;
+          height: $custom-control-indicator-size * 1.5;
+          border-radius: $custom-switch-indicator-border-radius * 1.5;
+          right: -($custom-switch-width + $custom-control-gutter) * 1.5;
+          top: ($font-size-base * $line-height-base - $custom-control-indicator-size) / 4;
+        }
+        &::after {
+          width: subtract($custom-control-indicator-size * 1.5, $custom-control-indicator-border-width * 4);
+          height: subtract($custom-control-indicator-size * 1.5, $custom-control-indicator-border-width * 4);
+          border-radius: $custom-switch-indicator-border-radius * 1.5;
+          right: add(-(($custom-switch-width - $custom-control-gutter) * 1.5), $custom-control-indicator-border-width * -4);
+          top: add(($font-size-base * $line-height-base - $custom-control-indicator-size) / 4, $custom-control-indicator-border-width * 2);
+        }
+      }
+    } @else {
+      padding-left: ($custom-switch-width + $custom-control-gutter) * 1.5;
+      .custom-control-label {
+        &::before {
+          width: $custom-switch-width * 1.5;
+          height: $custom-control-indicator-size * 1.5;
+          border-radius: $custom-switch-indicator-border-radius * 1.5;
+          left: -($custom-switch-width + $custom-control-gutter) * 1.5;
+          top: ($font-size-base * $line-height-base - $custom-control-indicator-size) / 4;
+        }
+        &::after {
+          width: subtract($custom-control-indicator-size * 1.5, $custom-control-indicator-border-width * 4);
+          height: subtract($custom-control-indicator-size * 1.5, $custom-control-indicator-border-width * 4);
+          border-radius: $custom-switch-indicator-border-radius * 1.5;
+          left: add(-(($custom-switch-width + $custom-control-gutter) * 1.5), $custom-control-indicator-border-width * 3);
+          top: add(($font-size-base * $line-height-base - $custom-control-indicator-size) / 4, $custom-control-indicator-border-width * 2);
+        }
+      }
+    }
+    
+    .custom-control-input:checked ~ .custom-control-label {
+      &::after {
+        transform: translateX(($custom-switch-width - $custom-control-indicator-size) * 1.5);
       }
     }
   }

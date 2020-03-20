@@ -4,11 +4,13 @@
   </a>  
 </p>
 <h1 align="center">
-	Bootstrap 4.3 RTL With Dark Mode
+	Bootstrap 4.4.1 RTL With Dark Mode
 <h1>
 <h2 align="center">
   BOOTS🧛‍♂️
 </h2>
+
+<div align="center"><a target="_blank" href="https://srv-file2.gofile.io/download/GQUt4D/Bootsdrac.gif"><img src="https://srv-file2.gofile.io/download/GQUt4D/Bootsdrac.gif" title="Bootsdrac showcase" /></a></div>
 
 ## What's included  
   
@@ -43,6 +45,24 @@ bootstrap/
         └── bootstrap.min.js.map  
 ```
 
+## For kickass developers who want to help me or change the codes:
+
+🔹 First of all don't forget `npm i`  :)
+
+🔹 I used `gulp` as package manager, sry if u don't like it.
+
+🔹 For darkmode theme I added another variable file: `_variables_dark.scss`.
+
+🔹 I added some extra things to Bootstrap(like custom buttons, Custom Switches and etc), If you want to remove it or edit it you can find it in this directory:
+
+```text  
+bootstrap/  
+└── scss/  
+    └── dracs-addons/  
+        ├── _addons-main.scss  
+        ├── _addons-mixins.scss  
+        └── _addons-variables.scss
+```
 
 ## Creators  
   
