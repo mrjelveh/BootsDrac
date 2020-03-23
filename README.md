@@ -12,7 +12,35 @@
 
 <div align="center"><a target="_blank" href="./demo/Bootsdrac.gif"><img src="./demo/Bootsdrac.gif" title="Bootsdrac showcase" /></a></div>
 
-## What's included  
+
+## Installation
+
+On npm:
+
+`npm i bootsdrac`
+
+or
+
+Download files:
+[Download compiled file](https://github.com/mrjelveh/BootsDrac/releases/download/1.0.0/Bootsdrac-Compiled-v1.0.0-dist.zip) | [Download source file](https://github.com/mrjelveh/BootsDrac/archive/1.0.0.zip) | 
+|---|---|---|
+
+## What is Bootsdrac?
+
+A front-end framework based on the latest version of Bootstrap with extra abalities: 
+
+➡️ RTL version of bootstrap without reversing and code overwriting.
+
+➡️ Dark theme.
+
+➡️ Multicolor & different sizes for pagination and custom switches, rounded option for all components.
+
+ **📑 You can use Bootstrap documention:** 
+
+[Bootstrap documention](https://getbootstrap.com/docs/4.4/getting-started/introduction)  
+
+
+## What's included
   
 Within the download you'll find the following directories and files, logically grouping common assets and providing both compiled and minified variations. You'll see something like this:  
   
@@ -47,13 +75,13 @@ bootstrap/
 
 ## For kickass developers who want to help me or change the codes:
 
-🔹 First of all don't forget `npm i`  :)
+🔹 First of all don't forget `npm i`.
 
-🔹 I used `gulp` as package manager, sry if u don't like it.
+🔹 I used `gulp` as package manager.
 
 🔹 For darkmode theme I added another variable file: `_variables_dark.scss`.
 
-🔹 I added some extra things to Bootstrap(like custom buttons, Custom Switches and etc), If you want to remove it or edit it you can find it in this directory:
+🔹 I added some extra things to Bootstrap (like custom buttons, Custom switches and etc), If you want to remove it or edit it you can find it in this directory:
 
 ```text  
 bootstrap/  
@@ -63,20 +91,3 @@ bootstrap/
         ├── _addons-mixins.scss  
         └── _addons-variables.scss
 ```
-
-## Creators  
-  
-**Mark Otto**  
-  
-- <https://twitter.com/mdo>  
-- <https://github.com/mdo>  
-  
-**Jacob Thornton**  
-  
-- <https://twitter.com/fat>  
-- <https://github.com/fat>
--   
-**MohammadReza Jelveh (RTL/Dark Version)**  
-  
-- <https://twitter.com/mrjelveh>  
-- <https://github.com/mrjelveh>

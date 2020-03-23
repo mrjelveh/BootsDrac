@@ -1,6 +1,13 @@
-// initials
+/*!
+ * gulp file
+ * Copyright 2020 MohammadReza Jelveh
+ * Licensed under MIT (https://github.com/mrjelveh/BootsDrac/blob/master/LICENSE)
+ */
+
+// Initialing packages 
+
 const autoprefixer = require('autoprefixer'),
-      cssnano = require('gulp-cssnano'),
+      cleanCSS = require('gulp-clean-css'),
       { src, dest, parallel, series, watch } = require('gulp'),
       concat = require('gulp-concat'),
       postcss = require('gulp-postcss'),
@@ -11,25 +18,30 @@ const autoprefixer = require('autoprefixer'),
       plumber = require('gulp-plumber');
 
       
-// file path
+// File path
+
 const files = {
     scssPath: 'scss/**/*.scss',
     jsPath: 'js/**/*.js'
 }
 
-// sass
+
+// SASS build & compiling
+
 function scssTask() {
     return src(files.scssPath)
            .pipe(sass())
-           .pipe(dest('dist/css'))
-           .pipe(cssnano())
+           .pipe(dest('dist/css')) // output without compression
+           .pipe(cleanCSS())
            .pipe(rename({
                 suffix: '.min'
             }))
-           .pipe(dest('dist/css'))
+           .pipe(dest('dist/css')) // output with compression
 }
 
-// js
+
+// JS Compiling
+
 function jsTask() {
     return src(files.jsPath)
            .pipe(concat('main.js'))
@@ -41,22 +53,25 @@ function jsTask() {
                     }]
                 ]
             }))
-           .pipe(dest('dist/js'))
+           .pipe(dest('dist/js')) // output without compression
            .pipe(uglify())
            .pipe(rename({
                 suffix: '.min'
             }))
-           .pipe(dest('dist/js'))
+           .pipe(dest('dist/js')) // output with compression
 }
 
 
-// watch
+// Watch live changes 👁
+
 function watchTask() {
     watch([files.scssPath, files.jsPath],
         parallel(scssTask, jsTask));
 }
 
-// default
+
+// Default
+
 exports.default = series(
     parallel(scssTask, jsTask),
     watchTask
