@@ -3,9 +3,6 @@ body {
     font-family: 'Sahel', sans-serif;
 }
 
-pre {
-    background: #f7f7f9
-}
 
 @media (min-width: 768px) {
     body>.navbar-transparent {
